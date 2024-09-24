@@ -8,32 +8,17 @@
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  frameRate(10)
 }
 
 function draw() {
-  myBackground();
-  myForeground();
-}
-function myBackground(){
-  noStroke();
-  let rectHeight = 1;
-  for(let y = height; y >= 0; y-=rectHeight){
-    let value = map(y,0,height,0,234)
-    fill(value, 255-value, 255-value)
-    rect(0, y, width,rectHeight);
-  }
+  frameRate(120);
+   if(mouseIsPressed){ 
+    fill(0);
+    noStroke(circle(mouseX, mouseY, 20,));
+   }
+   if(keyIsDown(67)){
+    clear();
+   }
 }
 
 
-// function myForeground(){
-//   let starCount = 0;
-//   while(starCount < 10){
-//     fill(40, 20, 222);
-//     let x = random(0, width);
-//     let y = random(0, height)
-//     circle(x,y,10)
-//     starCount++
-//   }
-// }
-  

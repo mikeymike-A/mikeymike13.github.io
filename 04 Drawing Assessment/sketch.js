@@ -33,6 +33,9 @@ function draw() {
 
   // Draw clouds
   movableClouds();
+
+  //Add signature
+  artistSignature();
 }
 function movableClouds() {
   fill(cloudColor);  // Use current cloud color
@@ -66,10 +69,14 @@ function setNightColors() {
   sunColor = color(200, 200, 200);  // Light gray moon
   cloudColor = color(100, 100, 100); // Dark gray clouds
   grassColor = color(0, 50, 0);     // Very dark green grass
-  }
+}
 function setRainColors() {
   bgColor = color(100, 100, 150);   // Grayish blue rainy sky
   sunColor = color(154, 145, 27);  // Darkened sun during rain
   cloudColor = color(150, 150, 150); // Rainy-gray clouds
   grassColor = color(50, 100, 50);  // Darker grass during rain
+}
+function artistSignature(){
+  fill(0);
+  text("Michael", 650, 370, 40, 20)
 }
