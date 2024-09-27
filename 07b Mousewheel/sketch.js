@@ -15,8 +15,12 @@ function setup() {
 }
 
 function draw() {
-  background(220);
-  x = mouseX, y = mouseY;
+  // background(220);
+  x = lerp(x,mouseX,0.12), y = lerp(y,mouseY,0.12);
+  let r = map(x, 0, width, 0, 255);
+  let g = map(x, 0, height, 0, 255);
+  let b = map(x, 0, width, 255, 0);
+  stroke(r,g,b);
   circle(x,y,w);
 }
 
